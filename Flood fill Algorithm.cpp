@@ -1,4 +1,4 @@
-// Flood Fill Algorithm - https://www.geeksfor  geeks.org/problems/flood-fill-algorithm1856/1
+// Flood Fill Algorithm - https://www.geeksforgeeks.org/problems/flood-fill-algorithm1856/1
 
 // An image is represented by a 2-D array of integers, each integer representing the pixel value of the image.
 
@@ -35,7 +35,7 @@ void helper(vector<vector<int>>& matrix, int r, int c, int originalColor, int ne
     matrix[r][c] = newColor;  //changing to new color
 
     helper(matrix, r - 1, c, originalColor, newColor, row, col);
-    helper(matrix, r + 1, c, originalColor, newColor, row, col); // recursive call in all 4 opp cells
+    helper(matrix, r + 1, c, originalColor, newColor, row, col); // recursive calls
     helper(matrix, r, c - 1, originalColor, newColor, row, col);
     helper(matrix, r, c + 1, originalColor, newColor, row, col);
 }
@@ -56,7 +56,7 @@ int main() {
     cin >> m >> n;
     cin >> sr >> sc >> newColor;
 
-    vector<vector<int>> matrix(m, vector<int>(n));
+    vector<vector<int>> matrix(m, vector<int>(n));  //input
     for (int i = 0; i < m; ++i) {
         for (int j = 0; j < n; ++j) {
             cin >> matrix[i][j];
@@ -70,6 +70,7 @@ int main() {
         for (int i : sol) {
             cout << i << " ";
         }
+        cout<<endl;
     }
 
     return 0;
