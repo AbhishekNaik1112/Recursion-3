@@ -64,8 +64,7 @@ int main() {
     return 0;
 }
 
-
-// Can be optimised by using dp
+// Can be optimized by using dp
 
 #include <bits/stdc++.h>
 using namespace std;
